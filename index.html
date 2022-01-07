@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        color: white;
+        font-size: 20px;
+        /* background-image: linear-gradient( to left,rgba(58, 58, 158, 0.8),rgba(136, 136, 206, 0.7)), url('https://images.pexels.com/photos/3184299/pexels-photo-3184299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
+        background-image: linear-gradient(
+            to right,
+            rgba(58, 58, 158, 0.9),
+            rgba(136, 136, 206, 0.7)
+          ),
+          url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+        height: 100%;
+      }
+
+      .form {
+        background-color: rgba(27, 27, 50, 0.8);
+        width: 50%;
+        margin: auto;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      select {
+        width: 102%;
+      }
+
+      .form-group {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+
+      input,
+      select,
+      #submit {
+        font-family: inherit;
+        font-size: inherit;
+      }
+
+      .form-control {
+        height: 35px;
+        border-radius: 5px;
+        margin: auto;
+        width: 100%;
+        /* border: 1px solid #ced4da; */
+        box-sizing: border-box;
+        margin-top: 10px;
+        border: none;
+        padding-left: 16px;
+      }
+
+      .radio input {
+        height: 15px;
+        width: 15px;
+      }
+
+      .radio {
+        margin-bottom: 15px;
+      }
+
+      input[type="checkbox"] {
+        font-size: 15px;
+      }
+
+      #submit {
+        background: #37af65;
+        border: none;
+      }
+
+      #title {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        margin-top: 100px;
+      }
+      input[type=checkbox]{
+          margin-bottom: 15px;
+      }
+      #comments {
+          resize: vertical;
+          height: unset;
+      }
+    </style>
+  </head>
+  <body id="grad1">
+    <div id="title">
+      <h1>Survey form</h1>
+      <p>
+        <i> Thank you for taking the time to help us improve the platform </i>
+      </p>
+    </div>
+
+    <!-- <div id="grad1"></div> -->
+    <div class="form">
+      <form action="">
+        <div class="form-group">
+          <label for="name">Name</label>
+
+          <input
+            type="text"
+            required
+            name="name"
+            id="name"
+            placeholder="Enter name"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            required
+            placeholder="Enter email"
+          />
+        </div>
+
+        <div class="form-group">
+          <!-- <select class='form-control' name="age" id="age"> -->
+          <label for="age">Age</label>
+
+          <input
+            type="number"
+            name="age"
+            min="5"
+            max="100"
+            required
+            id="age"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="role"
+            >Which option best describes your current role</label
+          >
+          <select class="form-control" name="role" id="role">
+            <option value="" disabled selected>Select</option>
+            <option value="student">Student</option>
+            <option value="employee">Employee</option>
+            <option value="houewife">House wife</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="rec">
+          Would you recommend ABC Company to a friend?
+              
+          </label>
+          <br>
+          <br>
+
+          <div class="radio">
+            <input
+              type="radio"
+
+              name="rec"
+              class="radio-control"
+              value="Yes"
+              id="Yes"
+            />
+            <label for="Yes"> Definitely</label>
+          </div>
+          
+          <div class="radio">
+            <input
+              type="radio"
+
+              name="rec"
+              class="radio-control"
+              value="No"
+              id="No"
+            />
+            <label for="No"> Never</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="rec" class="radio-control" value="maybe"  id="maybe"/> <label for="maybe"> May be</label> 
+          </div>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="role"
+              >Which part of our service you like most?</label
+            >
+            <select class="form-control" name="role" id="role">
+              <option value="" disabled selected>Select</option>
+              <option value="student">Timely delivery</option>
+              <option value="employee">Packaging</option>
+              <option value="houewife">After Sales Service</option>
+            </select>
+          </div>
+  
+        <div class="form-group">
+            <label for="role"
+              >Which of these product categories you like most <i>(Check all that apply)</i></label
+            >
+            <br>
+            <br>
+            <input type="checkbox" name="product" class="check-control"  id="product1"/> <label for="product1"> Garments</label> <br>
+
+            <input type="checkbox" name="product" class="check-control"  id="product2"/> <label for="product2"> Cosmetics</label> <br>
+            <input type="checkbox" name="product" class="check-control"  id="product3"/> <label for="product3"> Shoes</label> <br>
+            <input type="checkbox" name="product" class="check-control"  id="product4"/> <label for="product4"> Fragrances</label> <br>
+            <input type="checkbox" name="product" class="check-control"  id="product5"/> <label for="product5"> Watches</label> <br>
+
+        </div>
+  
+
+        <div class="form-group">
+            <label for="comments">Any comments or suggestions?</label>
+            <textarea name="comments" class="form-control" id="comments"  rows="6"></textarea>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="submit"
+            class="form-control"
+            id="submit"
+            value="Submit"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
